@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Server Info</title>
+<!--Skrypt, który służy do wyświetlania czasu z maszyny klienta (data i godzina)-->
+  <script>
+        function displayClientTime() {
+            var currentTime = new Date().toLocaleString();
+            document.getElementById("clientTime").textContent = currentTime;
+        }
+    </script>
+</head>
+<!--Wyświetlenie czasu klienta-->
+<body onload="displayClientTime()">
+<h1>Server Information</h1>
+<!--Wyświetlenie adresu IP przekazanaego z kontrolera-->
+<p>Client IP Address: <span th:text="${ipAddress}"></span></p>
+<p>Client Time: <span id="clientTime"></span></p>
+</body>
+</html>
