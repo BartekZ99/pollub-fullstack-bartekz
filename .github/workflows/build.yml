@@ -1,9 +1,6 @@
 name: Build and Push Docker Images by BartekZ
 
-on:
-  push:
-    branches:
-      - master
+on: [push]
 
 jobs:
   build-and-push:
